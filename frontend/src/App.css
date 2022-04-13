@@ -1,0 +1,234 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+
+.app {
+  text-align: center;
+}
+
+.body {
+  background-color: #282c34;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+/* 
+* Gradient buttons
+*/
+.gradient-button {
+  font-family: Lato, Arial, sans-serif;
+  background-size: 200% auto;
+  border: none;
+  box-shadow: 0 0 20px #eee;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 12%), 0 1px 2px rgb(0 0 0 / 24%);
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 20px;
+  margin: 12px;
+  padding: 12px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: .5s;
+  transition: all .3s cubic-bezier(.25, .8, .25, 1);
+  border-radius: 10px;
+}
+
+.gradient-button:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.gradient-button-1 {
+  background-image: linear-gradient(90deg, #c91753 0, #6e3737 51%, #c91753);
+}
+
+.gradient-button-1:hover {
+  background-position: right center;
+}
+
+
+/* 
+* Display messages on frontend
+*/
+ul,
+li {
+  list-style: none;
+}
+
+.message-data {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.message-data-time {
+  color: #a8aab1;
+  padding-left: 6px;
+}
+
+.online {
+  color: #86BB71;
+}
+
+.online,
+.offline,
+.me {
+  margin-right: 3px;
+  font-size: 10px;
+}
+
+.message {
+  color: white;
+  padding: 18px 20px;
+  line-height: 26px;
+  font-size: 16px;
+  border-radius: 7px;
+  margin-bottom: 30px;
+  width: 90%;
+  position: relative;
+  background: #86BB71;
+}
+
+.message:after {
+  bottom: 100%;
+  left: 7%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-bottom-color: #86BB71;
+  border-width: 10px;
+  margin-left: -10px;
+}
+
+/*
+* Toast messages
+*/
+.Toastify__toast-container--top-center {
+  width: calc(95%);
+}
+
+.Toastify__toast-theme--light {
+  font-family: Lato, arial, sans-serif;
+  font-weight: bold;
+  color: #fff;
+}
+
+.Toastify__toast--success {
+  background: #86bb71;
+}
+
+.Toastify__toast--error {
+  background: #b94848;
+}
+
+.Toastify__toast--info {
+  background: #5699c1;
+}
+
+.Toastify__toast--success svg,
+.Toastify__toast--error svg,
+.Toastify__toast--warning svg,
+.Toastify__toast--info svg {
+  fill: #fff;
+}
+
+.Toastify__progress-bar--success,
+.Toastify__progress-bar--error,
+.Toastify__progress-bar--warning,
+.Toastify__progress-bar--info {
+  background: #ffffff !important;
+}
+
+/*
+* Message box
+*/
+.message-box {
+  align-items: center;
+  background-color: #282c34;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  font-size: calc(10px + 2vmin);
+  justify-content: center;
+  min-height: 10vh;
+  flex: 0 1 40px;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  bottom: 0;
+
+}
+
+
+.message-box .message-input {
+  background: rgb(0 0 0 / 30%);
+  border: none;
+  border-radius: 10px;
+  outline: none !important;
+  resize: none;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 16px;
+  height: 80px;
+  margin: 10px;
+  padding: 10px;
+  padding-right: 80px;
+  width: 100%;
+}
+
+.message-box textarea:focus:-webkit-placeholder {
+  color: transparent;
+}
+
+.message-box .message-submit {
+  position: absolute;
+  z-index: 1;
+  right: 20px;
+  color: #fff;
+  border: none;
+  background: #248A52;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 1;
+  padding: 6px 12px;
+  border-radius: 5px;
+  outline: none !important;
+  transition: background 0.2s ease;
+  height: 60%;
+}
+
+.message-box .message-submit:hover {
+  background: #1D7745;
+}
+
+/*
+* Scrollbar
+*/
+.all-messages {
+  height: 50vh;
+  overflow: auto;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
